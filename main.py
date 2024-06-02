@@ -58,8 +58,8 @@ def plot_graphs(resistance, temperature, parameters, plotname):
 
     ax.set(xlabel='Температура °С', ylabel='Сопротивление Ом', title='NTC 3950')
     ax.grid()
+    
     fig.set_size_inches(18.5, 10.5)
-    fig.legend()
     fig.savefig(plotname, dpi=600)
 
     plt.legend()
@@ -86,11 +86,12 @@ def calc_params(resistance, temperature):
     return curve_fit(steinhart, resistance, rtemp)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    make_output_dir('./plots/')
+
+def interpolateSTH(dataFile, outputDir):
+    make_output_dir(outputDir)
     temperature, resistance = read_xslx(filename='./data/NTC3950.xlsx', sheet='Sheet3', square='A2:B143')
     parameters, covariance = calc_params(resistance=resistance, temperature=temperature)
     print_params(parameters=parameters)
-    plot_graphs(resistance=resistance, temperature=temperature, parameters=parameters, plotname='./plots/ntc3950.png')
-
+    plot_graphs(resistance=resistance, temperature=temperature, parameters=parameters, plotname=outputDir + '/ntc3950.png')    
+    
+interpolateSTH(dataFile='./data/NTC3950.xlsx', outputDir='./plots')
