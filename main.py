@@ -60,13 +60,14 @@ def plot_graphs(resistance, temperature, parameters, plotname):
     ax.grid()
     
     fig.set_size_inches(18.5, 10.5)
+    fig.legend()
     fig.savefig(plotname, dpi=600)
 
     plt.legend()
-    plt.show()
+    #plt.show()
 
-    plt.clf()
-    plt.cla()
+    # plt.clf()
+    # plt.cla()
 
 
 #  Печать коэффициентов A,B,C уравнения Стейнхарта-Харта
