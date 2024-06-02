@@ -39,5 +39,5 @@ pip install -r /path/to/requirements.txt
 
 ![Шаг 4](./figures/instvenv04.png)
 
-
+Наблюдаем за установкой пакетов
 
