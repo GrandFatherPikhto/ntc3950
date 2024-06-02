@@ -15,3 +15,23 @@
 Поэтому, стоит использовать библиотеку python [scipy](https://scipy.org/). Это значительно повышает точность полученных коэффициентов уравнения, что видно на пробном графике сравнения экспериментальной кривой и кривой полученной в результате интерполяции
 
 ![Графики апроксимированной функции и исходных данных термистора NTC3950](figures/ntc3950.png)
+
+# Запуск программы
+
+В директории с программой запустить
+```cmd
+pip install -r /path/to/requirements.txt
+```
+
+Или в VSCode F1, (Ctrl+Shit+P), >Python: Create Environment
+![Шаг 1](fugures/inst_venv01.png)
+
+> Python: Create Virtual Environment
+![Шаг 2](fugures/inst_venv02.png)
+
+...
+![Шаг 3](fugures/inst_venv03.png)
+
+...
+![Шаг 4](fugures/inst_venv04.png)
+
