@@ -25,17 +25,19 @@ pip install -r /path/to/requirements.txt
 
 Или в VSCode F1, (Ctrl+Shit+P), >Python: Create Environment
 
-![Шаг 1](./fugures/inst_venv01.png)
+![Шаг 1](./fugures/instvenv01.png)
 
 > &gt; Python: Create Virtual Environment
 
-![Шаг 2](./fugures/inst_venv02.png)
+![Шаг 2](./fugures/instvenv02.png)
 
 > &gt; Python: Select Interpreter
 
-![Шаг 3](./fugures/inst_venv03.png)
+![Шаг 3](./fugures/instvenv03.png)
 
 > &gt; Using requirements.txt
 
-![Шаг 4](./fugures/inst_venv04.png)
+![Шаг 4](./fugures/instvenv04.png)
+
+
 
