@@ -1,0 +1,20 @@
+# Аппроксимация
+parameters, covariance = curve_fit(steinhart, resistance, temperature)
+print(parameters)
+pars = [0.7337245035E-3, 2.089853390E-4, 1.415785134E-7]
+fitted = steinhart(resistance, *parameters)
+calculated = steinhart(resistance, *pars)
+# print(fitted)
+# Построение графика
+fig, ax = plt.subplots(constrained_layout=True)
+ax.plot(resistance, temperature)
+# ax.plot(resistance, calculated)
+# ax.plot(resistance, fitted)
+# ax.set(xlabel='Температура °С', ylabel='Сопротивление кОм', title='NTC 3950')
+ax.set(xlabel='Сопротивление Ом', ylabel='Температура °С', title='NTC 3950')
+ax.grid()
+fig.set_size_inches(18.5, 10.5)
+fig.savefig('ntc3950.png', dpi=600)
+plt.show()
+plt.clf()
+plt.cla()
